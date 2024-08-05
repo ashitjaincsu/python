@@ -79,10 +79,8 @@ def print_menu(cart):
         elif choice == 'c':
             print("CHANGE ITEM QUANTITY")
             name = input("Enter the item name to modify: ")
-            description = input("Enter the new description (or 'none' to leave unchanged): ")
-            price = int(input("Enter the new price (or 0 to leave unchanged): "))
             quantity = int(input("Enter the new quantity (or 0 to leave unchanged): "))
-            item = ItemToPurchase.ItemToPurchase(name, description, price, quantity)
+            item = ItemToPurchase.ItemToPurchase(name, 'none', 0, quantity)
             cart.modify_item(item)
         elif choice == 'i':
             cart.print_descriptions()
